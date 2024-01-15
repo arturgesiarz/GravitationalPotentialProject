@@ -1,7 +1,9 @@
 package gravitationalPotential.model;
 
+import javafx.application.Application;
+
 public class DifferentialEquationGUI {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        Application.launch(AppEngine.class,args);
     }
 }
