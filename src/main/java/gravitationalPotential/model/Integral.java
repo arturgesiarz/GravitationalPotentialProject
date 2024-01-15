@@ -8,7 +8,7 @@ public class Integral {
      * calculated using Simpson's method.
      *
      */
-    public static double calculateIntegral(DoubleUnaryOperator function, double lowerBand, double upperBand){
+    public static double calculateIntegral(DoubleUnaryOperator function, double lowerBand, double upperBand){ // O(n)
         double result = 0;
         int intervals = 10000;
         double h = (upperBand - lowerBand) / intervals;

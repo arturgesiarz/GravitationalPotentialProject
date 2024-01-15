@@ -20,9 +20,7 @@ public class Matrix {
     void fillDiagonal(Array2DRowRealMatrix matrix, int n){
         double h = 3.0 / n;
 
-        // Jest tutaj uproszczenie poniewaz Dla każdej całki B(e_i,e_j), gdzie |i-j| > 1, otrzymujemy B(e_i,e_j)=0
-        // a wiec kiedy liczymy dla B(e_i, e_i), otrzymamy zawsze przedzial o dluogsci h
-        double valueOnDiagonal = Integral.calculateIntegral(x -> - 1 / pow(h, 2), 0, h);
+        double valueOnDiagonal = Integral.calculateIntegral(x -> 1 / pow(h, 2), 0, 2 * h); // O(n)
 
         for (int i = 0; i < n; i++) {
             // ustawiam wartosci
@@ -33,8 +31,7 @@ public class Matrix {
     void fillBesideDiagonal(Array2DRowRealMatrix matrix, int n){
         double h = 3.0 / n;
 
-        // Zawsze w wypadku kiedy liczymy wartosci dookola diagonalnej otrzymamy dlugosc 2 * h
-        double valueBesideDiagonal = Integral.calculateIntegral(x -> 1 / pow(h, 2), 0, 2 * h);
+        double valueBesideDiagonal = Integral.calculateIntegral(x -> - 1 / pow(h, 2), 0, h);
 
         for (int i = 0; i < n - 1; i++){
             // ustawiamy wartosci

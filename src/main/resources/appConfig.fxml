@@ -21,10 +21,10 @@
             </HBox>
             <LineChart fx:id="plot" horizontalZeroLineVisible="false" verticalZeroLineVisible="false" BorderPane.alignment="CENTER" legendVisible="false" visible="false" managed="false">
                 <xAxis>
-                    <NumberAxis autoRanging="false" label="x" lowerBound="-0.5" side="BOTTOM" tickUnit="0.5" upperBound="5.0" />
+                    <NumberAxis autoRanging="false" label="x" lowerBound="-0.05" side="BOTTOM" tickUnit="0.5" upperBound="3.05" />
                 </xAxis>
                 <yAxis>
-                    <NumberAxis autoRanging="false" label="Φ(x)" lowerBound="-0.5" side="LEFT" tickUnit="0.5" upperBound="15.0" />
+                    <NumberAxis autoRanging="false" label="Φ(x)" lowerBound="-0.05" side="LEFT" tickUnit="0.5" upperBound="15.0" />
                 </yAxis>
             </LineChart>
         </VBox>
