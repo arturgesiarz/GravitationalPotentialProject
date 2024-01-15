@@ -10,7 +10,7 @@ public class Integral {
      */
     public static double calculateIntegral(DoubleUnaryOperator function, double lowerBand, double upperBand){ // O(n)
         double result = 0;
-        int intervals = 10000;
+        int intervals = 3;
         double h = (upperBand - lowerBand) / intervals;
 
         double last = lowerBand;

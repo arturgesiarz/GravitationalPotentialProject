@@ -20,7 +20,7 @@ public class Matrix {
     void fillDiagonal(Array2DRowRealMatrix matrix, int n){
         double h = 3.0 / n;
 
-        double valueOnDiagonal = Integral.calculateIntegral(x -> 1 / pow(h, 2), 0, 2 * h); // O(n)
+        double valueOnDiagonal = Integral.calculateIntegral(x -> - 1 / pow(h, 2), 0, 2 * h); // O(n)
 
         for (int i = 0; i < n; i++) {
             // ustawiam wartosci
@@ -31,7 +31,7 @@ public class Matrix {
     void fillBesideDiagonal(Array2DRowRealMatrix matrix, int n){
         double h = 3.0 / n;
 
-        double valueBesideDiagonal = Integral.calculateIntegral(x -> - 1 / pow(h, 2), 0, h);
+        double valueBesideDiagonal = Integral.calculateIntegral(x -> 1 / pow(h, 2), 0, h);
 
         for (int i = 0; i < n - 1; i++){
             // ustawiamy wartosci
