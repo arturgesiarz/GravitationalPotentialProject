@@ -36,19 +36,21 @@ public class AppPresenter {
         int n = Integer.parseInt(argumentsField.getText());
         double[] values = this.solver.solver(n);
         double h = 3.0/n;
-        int i = 0;
 
         this.plot.getData().clear();
         XYChart.Series<Number, Number> series = new XYChart.Series<>();
+
+        // Dodaje punkty, jako moj warunek brzegowy
         series.getData().add(new XYChart.Data<>(0.0, 5.0));
         series.getData().add(new XYChart.Data<>(3.0, 4.0));
 
-        while(i < values.length - 1) {
+        // przesuwam sie o h, i odpoiwednio obliczam punkt
+        for (int i = 0; i < values.length - 1; i++){
             double x = h * (i + 1);
             double y = 5 - x / 3 + values[i];
             series.getData().add(new XYChart.Data<>(x, y));
-            i++;
         }
+
 
         this.plot.getData().add(0,series);
     }
