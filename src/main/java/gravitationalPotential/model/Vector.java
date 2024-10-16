@@ -3,7 +3,7 @@ package gravitationalPotential.model;
 import org.apache.commons.math3.linear.ArrayRealVector;
 
 public class Vector {
-    private static final double G = 6.67430e-11;  // wartosc mozna zmienic na wieksza aby sprawdzic wlasciwosci tej prostej
+    private static final double G = 6.67430e-1;  // wartosc mozna zmienic na wieksza aby sprawdzic wlasciwosci tej prostej
     private static final double CONSTANT = 4 * Math.PI * G;
     private final ArrayRealVector vector;
     Vector(int n){
